@@ -16,79 +16,81 @@
   <!-- ══ COLUMN 1 — INPUT (x=14..124) ══ -->
   <text x="69" y="52" text-anchor="middle" font-size="10" fill="#888" font-weight="600" letter-spacing="1">INPUT</text>
 
-  <rect x="14" y="62" width="110" height="112" rx="10" fill="#E6F1FB" stroke="#378ADD" stroke-width="1"/>
-  <text x="69" y="84"  text-anchor="middle" font-size="12" font-weight="600" fill="#0C447C">MRI scan</text>
-  <text x="69" y="102" text-anchor="middle" font-size="10" fill="#185FA5">Brain atlas</text>
-  <text x="69" y="118" text-anchor="middle" font-size="10" fill="#185FA5">Tissue mask</text>
-  <text x="69" y="134" text-anchor="middle" font-size="10" fill="#185FA5">Lesion mask*</text>
-  <text x="69" y="164" text-anchor="middle" font-size="9" fill="#aaa">* optional</text>
+  <!-- INPUT block centred on y=200: h=112 → y=144..256 -->
+  <rect x="14" y="144" width="110" height="112" rx="10" fill="#E6F1FB" stroke="#378ADD" stroke-width="1"/>
+  <text x="69" y="166" text-anchor="middle" font-size="11" font-weight="600" fill="#0C447C">MPF-map</text>
+  <text x="69" y="184" text-anchor="middle" font-size="10" fill="#185FA5">Brain segmentation</text>
+  <text x="69" y="202" text-anchor="middle" font-size="10" fill="#185FA5">WM-GM segmentation</text>
+  <text x="69" y="220" text-anchor="middle" font-size="10" fill="#185FA5">Lesions mask</text>
 
-  <!-- arrow 1 -->
-  <line x1="126" y1="118" x2="154" y2="118" stroke="#aaa" stroke-width="1.2" marker-end="url(#arr)"/>
+  <!-- arrow 1: y=200 -->
+  <line x1="126" y1="200" x2="154" y2="200" stroke="#aaa" stroke-width="1.2" marker-end="url(#arr)"/>
 
   <!-- ══ COLUMN 2 — PROCESSING (x=156..406) ══ -->
   <text x="281" y="52" text-anchor="middle" font-size="10" fill="#888" font-weight="600" letter-spacing="1">PROCESSING</text>
 
-  <rect x="156" y="62"  width="250" height="36" rx="7" fill="#EEEDFE" stroke="#7F77DD" stroke-width="0.8"/>
-  <text x="281" y="85"  text-anchor="middle" font-size="12" font-weight="600" fill="#26215C">Remap structure labels</text>
-  <line x1="281" y1="98"  x2="281" y2="108" stroke="#aaa" stroke-width="0.8" marker-end="url(#arr)"/>
+  <!-- 6 blocks × 36px + 5 gaps × 10px = 216+50=266px; top=200-133=67, bottom=333 -->
+  <rect x="156" y="67"  width="250" height="36" rx="7" fill="#EEEDFE" stroke="#7F77DD" stroke-width="0.8"/>
+  <text x="281" y="90"  text-anchor="middle" font-size="12" font-weight="600" fill="#26215C">Remap structure labels</text>
+  <line x1="281" y1="103" x2="281" y2="113" stroke="#aaa" stroke-width="0.8" marker-end="url(#arr)"/>
 
-  <rect x="156" y="110" width="250" height="36" rx="7" fill="#EEEDFE" stroke="#7F77DD" stroke-width="0.8"/>
-  <text x="281" y="133" text-anchor="middle" font-size="12" font-weight="600" fill="#26215C">Separate grey and white matter</text>
-  <line x1="281" y1="146" x2="281" y2="156" stroke="#aaa" stroke-width="0.8" marker-end="url(#arr)"/>
+  <rect x="156" y="115" width="250" height="36" rx="7" fill="#EEEDFE" stroke="#7F77DD" stroke-width="0.8"/>
+  <text x="281" y="138" text-anchor="middle" font-size="12" font-weight="600" fill="#26215C">Separate grey and white matter</text>
+  <line x1="281" y1="151" x2="281" y2="161" stroke="#aaa" stroke-width="0.8" marker-end="url(#arr)"/>
 
-  <rect x="156" y="158" width="250" height="36" rx="7" fill="#EEEDFE" stroke="#7F77DD" stroke-width="0.8"/>
-  <text x="281" y="181" text-anchor="middle" font-size="12" font-weight="600" fill="#26215C">Apply tissue segmentation mask</text>
-  <line x1="281" y1="194" x2="281" y2="204" stroke="#aaa" stroke-width="0.8" marker-end="url(#arr)"/>
+  <rect x="156" y="163" width="250" height="36" rx="7" fill="#EEEDFE" stroke="#7F77DD" stroke-width="0.8"/>
+  <text x="281" y="186" text-anchor="middle" font-size="12" font-weight="600" fill="#26215C">Apply tissue segmentation mask</text>
+  <line x1="281" y1="199" x2="281" y2="209" stroke="#aaa" stroke-width="0.8" marker-end="url(#arr)"/>
 
-  <rect x="156" y="206" width="250" height="36" rx="7" fill="#EEEDFE" stroke="#7F77DD" stroke-width="0.8"/>
-  <text x="281" y="229" text-anchor="middle" font-size="12" font-weight="600" fill="#26215C">Refine cortical boundaries</text>
-  <line x1="281" y1="242" x2="281" y2="252" stroke="#aaa" stroke-width="0.8" marker-end="url(#arr)"/>
+  <rect x="156" y="211" width="250" height="36" rx="7" fill="#EEEDFE" stroke="#7F77DD" stroke-width="0.8"/>
+  <text x="281" y="234" text-anchor="middle" font-size="12" font-weight="600" fill="#26215C">Refine cortical boundaries</text>
+  <line x1="281" y1="247" x2="281" y2="257" stroke="#aaa" stroke-width="0.8" marker-end="url(#arr)"/>
 
-  <rect x="156" y="254" width="250" height="36" rx="7" fill="#EEEDFE" stroke="#7F77DD" stroke-width="0.8"/>
-  <text x="281" y="277" text-anchor="middle" font-size="12" font-weight="600" fill="#26215C">Combine segmentation regions</text>
-  <line x1="281" y1="290" x2="281" y2="300" stroke="#aaa" stroke-width="0.8" marker-end="url(#arr)"/>
+  <rect x="156" y="259" width="250" height="36" rx="7" fill="#EEEDFE" stroke="#7F77DD" stroke-width="0.8"/>
+  <text x="281" y="282" text-anchor="middle" font-size="12" font-weight="600" fill="#26215C">Combine segmentation regions</text>
+  <line x1="281" y1="295" x2="281" y2="305" stroke="#aaa" stroke-width="0.8" marker-end="url(#arr)"/>
 
-  <rect x="156" y="302" width="250" height="36" rx="7" fill="#FAECE7" stroke="#D85A30" stroke-width="0.8"/>
-  <text x="281" y="325" text-anchor="middle" font-size="12" font-weight="600" fill="#4A1B0C">Exclude demyelination lesions</text>
+  <rect x="156" y="307" width="250" height="36" rx="7" fill="#FAECE7" stroke="#D85A30" stroke-width="0.8"/>
+  <text x="281" y="330" text-anchor="middle" font-size="12" font-weight="600" fill="#4A1B0C">Exclude demyelination lesions</text>
 
-  <!-- arrow 2 -->
+  <!-- arrow 2: midpoint of processing column = (67+343)/2 = 200 -->
   <line x1="408" y1="200" x2="430" y2="200" stroke="#aaa" stroke-width="1.2" marker-end="url(#arr)"/>
 
   <!-- ══ COLUMN 3 — METRICS (x=432..574) ══ -->
   <text x="503" y="52" text-anchor="middle" font-size="10" fill="#888" font-weight="600" letter-spacing="1">METRICS</text>
 
-  <rect x="432" y="130" width="142" height="44" rx="7" fill="#E1F5EE" stroke="#1D9E75" stroke-width="0.8"/>
-  <text x="503" y="149" text-anchor="middle" font-size="12" font-weight="600" fill="#04342C">Mean MRI intensity</text>
-  <text x="503" y="164" text-anchor="middle" font-size="10" fill="#0F6E56">per brain structure</text>
+  <!-- 2 blocks × 44px + 10px gap = 98px; centre on y=200 → top=151 -->
+  <rect x="432" y="151" width="142" height="44" rx="7" fill="#E1F5EE" stroke="#1D9E75" stroke-width="0.8"/>
+  <text x="503" y="170" text-anchor="middle" font-size="12" font-weight="600" fill="#04342C">Mean MRI intensity</text>
+  <text x="503" y="185" text-anchor="middle" font-size="10" fill="#0F6E56">for each structure</text>
 
-  <rect x="432" y="188" width="142" height="44" rx="7" fill="#E1F5EE" stroke="#1D9E75" stroke-width="0.8"/>
-  <text x="503" y="207" text-anchor="middle" font-size="12" font-weight="600" fill="#04342C">Structure volume</text>
-  <text x="503" y="222" text-anchor="middle" font-size="10" fill="#0F6E56">in mL, per structure</text>
+  <rect x="432" y="205" width="142" height="44" rx="7" fill="#E1F5EE" stroke="#1D9E75" stroke-width="0.8"/>
+  <text x="503" y="224" text-anchor="middle" font-size="12" font-weight="600" fill="#04342C">Structure volume</text>
+  <text x="503" y="239" text-anchor="middle" font-size="10" fill="#0F6E56">in mL, per structure</text>
 
-  <text x="503" y="254" text-anchor="middle" font-size="10" fill="#888">42 brain structures</text>
+  <text x="503" y="265" text-anchor="middle" font-size="10" fill="#888">42 brain structures</text>
 
-  <!-- arrow 3 -->
+  <!-- arrow 3: y=200 -->
   <line x1="576" y1="200" x2="600" y2="200" stroke="#aaa" stroke-width="1.2" marker-end="url(#arr)"/>
 
   <!-- ══ COLUMN 4 — OUTPUT (x=602..666) ══ -->
   <text x="634" y="52" text-anchor="middle" font-size="10" fill="#888" font-weight="600" letter-spacing="1">OUTPUT</text>
 
-  <!-- Excel file card -->
-  <rect x="602" y="130" width="64" height="82" rx="8" fill="#EAF3DE" stroke="#639922" stroke-width="1"/>
+  <!-- Excel card h=82, centre on y=200 → y=159..241 -->
+  <rect x="602" y="159" width="64" height="82" rx="8" fill="#EAF3DE" stroke="#639922" stroke-width="1"/>
   <!-- folded corner -->
-  <polyline points="644,130 666,152 644,152" fill="#C0DD97" stroke="#639922" stroke-width="0.8"/>
+  <polyline points="644,159 666,181 644,181" fill="#C0DD97" stroke="#639922" stroke-width="0.8"/>
   <!-- label -->
-  <text x="634" y="172" text-anchor="middle" font-size="13" font-weight="700" fill="#173404">.xlsx</text>
+  <text x="634" y="202" text-anchor="middle" font-size="13" font-weight="700" fill="#173404">.xlsx</text>
   <!-- row lines mimicking spreadsheet -->
-  <line x1="608" y1="185" x2="660" y2="185" stroke="#639922" stroke-width="0.6" opacity="0.5"/>
-  <line x1="608" y1="194" x2="660" y2="194" stroke="#639922" stroke-width="0.6" opacity="0.35"/>
-  <line x1="608" y1="203" x2="660" y2="203" stroke="#639922" stroke-width="0.6" opacity="0.2"/>
+  <line x1="608" y1="214" x2="660" y2="214" stroke="#639922" stroke-width="0.6" opacity="0.5"/>
+  <line x1="608" y1="223" x2="660" y2="223" stroke="#639922" stroke-width="0.6" opacity="0.35"/>
+  <line x1="608" y1="232" x2="660" y2="232" stroke="#639922" stroke-width="0.6" opacity="0.2"/>
   <!-- col line -->
-  <line x1="630" y1="185" x2="630" y2="212" stroke="#639922" stroke-width="0.6" opacity="0.4"/>
+  <line x1="630" y1="214" x2="630" y2="241" stroke="#639922" stroke-width="0.6" opacity="0.4"/>
 
-  <text x="634" y="228" text-anchor="middle" font-size="9" fill="#555">2 sheets</text>
-  <text x="634" y="240" text-anchor="middle" font-size="9" fill="#888">subjects × structures</text>
+  <text x="634" y="257" text-anchor="middle" font-size="9" fill="#555">2 sheets</text>
+  <text x="634" y="269" text-anchor="middle" font-size="9" fill="#888">subjects × structures</text>
 
   <!-- ── FOOTER ── -->
   <line x1="14" y1="345" x2="666" y2="345" stroke="#eee" stroke-width="0.8"/>
