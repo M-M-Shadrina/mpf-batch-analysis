@@ -6,7 +6,7 @@ Automated pipeline for processing MRI brain segmentation data. The pipeline rema
 
 ## Graphical Abstract
 
-![Graphical Abstract](graphical_abstract.svg)
+
 
 ---
 
