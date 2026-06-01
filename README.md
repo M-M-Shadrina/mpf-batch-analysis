@@ -14,7 +14,7 @@ Automated pipeline for processing MRI brain segmentation data. The pipeline rema
 
 ```
 ├── process_all_folders_sctipt_en.py      # Per-folder segmentation processing script
-├── process_segmentation.py      # Main script: runs pipeline across all folders & saves results
+├── segmentation_processor_en.py     # Main script: runs pipeline across all folders & saves results
 ├── input_example/               # Example input data (10 subjects)
 │   ├── subject_01/
 │   ├── subject_02/
@@ -86,7 +86,7 @@ A single Excel file `results_YYYYMMDD_HHMMSS.xlsx` is saved to the output folder
 | `Mean_Intensity` | Mean MRI intensity per structure per subject. Rows = subjects, columns = brain structures. |
 | `Volume_mL` | Volume (mL) per structure per subject. Rows = subjects, columns = brain structures. |
 
-Service labels (Label 30, Label 60) are excluded from both sheets. All 42 named structures are listed as columns in the anatomical order defined in `process_segmentation.py`.
+Service labels (Label 30, Label 60) are excluded from both sheets. All 42 named structures are listed as columns in the anatomical order defined in `segmentation_processor_en.py`.
 
 #### Example output (Mean_Intensity sheet)
 
@@ -143,7 +143,7 @@ Python 3.8+ is required.
 Run the main script and follow the interactive prompts:
 
 ```bash
-python process_segmentation.py
+python segmentation_processor_en.py.py
 ```
 
 You will be asked for three paths:
@@ -179,7 +179,7 @@ Step 5 — Combine           segmented cortex + GM atlas → combined segmentati
 Step 6 — Remove lesions    Zero out demyelination lesion voxels (if file present)
 ```
 
-After all folders are processed, `process_segmentation.py` extracts mean intensity and volume per structure and saves the results to Excel.
+After all folders are processed, `segmentation_processor_en.pyy` extracts mean intensity and volume per structure and saves the results to Excel.
 
 ---
 
