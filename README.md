@@ -143,8 +143,8 @@ Python 3.8+ is required.
 Run the main script and follow the interactive prompts:
 
 ```bash
-python segmentation_processor_en.py.py
-```
+python segmentation_processor_en.py
+``
 
 You will be asked for three paths:
 
