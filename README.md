@@ -13,7 +13,7 @@ Automated pipeline for processing MRI brain segmentation data. The pipeline rema
 ## Repository Structure
 
 ```
-├── segmentation_script.py       # Per-folder segmentation processing script
+├── process_all_folders_sctipt_en.py      # Per-folder segmentation processing script
 ├── process_segmentation.py      # Main script: runs pipeline across all folders & saves results
 ├── input_example/               # Example input data (10 subjects)
 │   ├── subject_01/
@@ -48,7 +48,7 @@ subject_01/
 | `MPFuncor_coef_transform.nii(.gz)` | Source MRI quantitative map (e.g. MPF — Macromolecular Proton Fraction). Intensity values from this file are used to compute per-structure mean intensity. | ✅ Yes |
 | `lesions.nii.gz` | Binary mask of demyelination lesion voxels. If present, lesion voxels are zeroed out from the final combined segmentation before metric extraction. | ⬜ Optional |
 
-> **Note:** The pipeline uses flexible filename matching with glob patterns, so minor filename variations (e.g. `MPFuncor_transform.nii`, `MPFuncor_coef_transform.nii.gz`) are handled automatically. See `segmentation_script.py` for the full list of accepted patterns.
+> **Note:** The pipeline uses flexible filename matching with glob patterns, so minor filename variations (e.g. `MPFuncor_transform.nii`, `MPFuncor_coef_transform.nii.gz`) are handled automatically. See `process_all_folders_sctipt_en.py` for the full list of accepted patterns.
 
 ---
 
@@ -150,7 +150,7 @@ You will be asked for three paths:
 
 ```
 Enter path to data folder:       <path to folder containing subject subfolders>
-Enter path to processing script: <path to segmentation_script.py>
+Enter path to processing script: <path to process_all_folders_sctipt_en.py>
 Enter path to save results:      <path to output folder, or Enter to save next to data>
 ```
 
@@ -168,7 +168,7 @@ SELECT MODE:
 
 ## Pipeline Steps
 
-For each subject folder, `segmentation_script.py` performs the following steps:
+For each subject folder, `process_all_folders_sctipt_en.py` performs the following steps:
 
 ```
 Step 1 — Remap labels      Swap labels 14–19 ↔ 24–29 in the main atlas
