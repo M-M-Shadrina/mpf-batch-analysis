@@ -34,12 +34,9 @@ def find_main_segmentation(folder_path):
         "JHU_MNI_SS_WMPM_Type-III_MPF_Sha.nii",
         "JHU_MNI_SS_WMPM_Type-III_MPF.nii.gz",
         "JHU_MNI_SS_WMPM_Type-III_MPF.nii",
-        "*WMPM*.nii.gz",
-        "*WMPM*.nii",
-        "*MPF*.nii.gz",
-        "*MPF*.nii",
         "*JHU*.nii.gz",
-        "*JHU*.nii"
+        "*JHU*.nii",
+        "Output.nii.gz"
     ]
     return find_file_by_patterns(folder_path, patterns)
 
